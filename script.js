@@ -33,5 +33,12 @@ const restaurant = {
 
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
-  console.log(day);
+  //   console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day} we are open at ${open}`);
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+/*METHODS*/
+console.log(restaurant.order?.(0, 1) ?? "Method does not exists");
+console.log(restaurant.orderRisotto?.(0, 1) ?? "method does not exists");
